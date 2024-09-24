@@ -6,12 +6,12 @@ import (
 )
 
 type Message struct {
-	Action string      `json:"action"`
-	Data   interface{} `json:"data"`
+	Pattern string      `json:"pattern"`
+	Data    interface{} `json:"data"`
 }
 
 func HandleMessage(msg Message) interface{} {
-	switch msg.Action {
+	switch msg.Pattern { // Используем Pattern вместо Action
 	case "templateGetItem":
 		item := services.TemplateGetItem(msg.Data)
 		log.Printf("templateGetItem: %v", item)
@@ -37,8 +37,12 @@ func HandleMessage(msg Message) interface{} {
 		log.Printf("templateRemoveItem: %v", removed)
 		return removed
 
+	case "ping":
+		log.Println("Received PING request")
+		return "PONG"
+
 	default:
-		log.Println("Unknown action:", msg.Action)
-		return nil
+		log.Println("Unknown action:", msg.Pattern)
+		return "Unknown action"
 	}
 }

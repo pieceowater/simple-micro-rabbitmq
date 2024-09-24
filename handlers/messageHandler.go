@@ -25,12 +25,12 @@ func ConsumeMessage() error {
 	defer ch.Close()
 
 	q, err := ch.QueueDeclare(
-		"test_queue", // queue name
-		true,         // durable
-		false,        // delete when unused
-		false,        // exclusive
-		false,        // no-wait
-		nil,          // arguments
+		"template_queue", // queue name
+		true,             // durable
+		false,            // delete when unused
+		false,            // exclusive
+		false,            // no-wait
+		nil,              // arguments
 	)
 	if err != nil {
 		log.Fatal("Failed to declare a queue:", err)
