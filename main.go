@@ -1,14 +1,14 @@
 package main
 
 import (
+	gossiper "github.com/pieceowater-dev/lotof.lib.gossiper"
 	"log"
 	"simple-micro-rabbitmq/config"
 	"simple-micro-rabbitmq/handlers"
 )
 
 func main() {
-	// Загружаем конфигурацию
-	config.LoadEnv()
+	gossiper.Setup(config.GossiperConf)
 
 	// Начинаем чтение сообщений из RabbitMQ
 	log.Println("Starting to consume messages...")

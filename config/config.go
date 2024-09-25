@@ -1,22 +1,35 @@
 package config
 
 import (
-	"github.com/joho/godotenv"
-	"log"
-	"os"
+	gossiper "github.com/pieceowater-dev/lotof.lib.gossiper"
 )
 
-func LoadEnv() {
-	err := godotenv.Load()
-	if err != nil {
-		log.Println("No .env file found, using environment variables")
-	}
+var GossiperConf = gossiper.Config{
+	Env: gossiper.EnvConfig{
+		Required: []string{"RABBITMQ_DSN"},
+	},
+	AMQPConsumer: gossiper.AMQPConsumerConfig{
+		Queues: []gossiper.QueueConfig{
+			{
+				Name:    "template_queue",
+				Durable: true,
+			},
+		},
+		Consume: []gossiper.AMQPConsumeConfig{
+			{
+				Queue:    "template_queue",
+				Consumer: "example_consumer",
+				AutoAck:  true,
+			},
+		},
+	},
 }
 
 func GetRabbitDSN() string {
-	dsn := os.Getenv("RABBITMQ_DSN")
-	if dsn == "" {
-		log.Fatal("RABBITMQ_DSN is not set")
+	env := &gossiper.Env{}
+	val, err := env.Get(GossiperConf.Env.Required[0])
+	if err != nil {
+		return ""
 	}
-	return dsn
+	return val
 }
