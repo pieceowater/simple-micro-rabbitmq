@@ -7,10 +7,8 @@ github.com/mattn/go-colorable v0.1.13/go.mod h1:7S9/ev0klgBDR4GtXTXX8a3vIGJpMovk
 github.com/mattn/go-isatty v0.0.16/go.mod h1:kYGgaQfpe5nmfYZH+SKPsOc2e4SrIfOl2e/yFXSvRLM=
 github.com/mattn/go-isatty v0.0.20 h1:xfD0iDuEKnDkl03q4limB+vH+GxLEtL/jb4xVJSWWEY=
 github.com/mattn/go-isatty v0.0.20/go.mod h1:W+V8PltTTMOvKvAeJH7IuucS94S2C6jfK/D7dTCTo3Y=
-github.com/pieceowater-dev/lotof.lib.gossiper v1.0.12 h1:AnM2ne2e+Sl9E18hIP1AU0jq8wPl7khayb0/xAKPcX4=
-github.com/pieceowater-dev/lotof.lib.gossiper v1.0.12/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
-github.com/pieceowater-dev/lotof.lib.gossiper v1.0.13 h1:gTh4RRM1pju5BZ2fruy5XCBanbFXrS+Ph6Wz2i/PIzU=
-github.com/pieceowater-dev/lotof.lib.gossiper v1.0.13/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
+github.com/pieceowater-dev/lotof.lib.gossiper v1.0.14 h1:xRyVBiFg524zc2XREoqu1AaCzxQz86/p6UJf5t3gb/k=
+github.com/pieceowater-dev/lotof.lib.gossiper v1.0.14/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
 github.com/streadway/amqp v1.1.0 h1:py12iX8XSyI7aN/3dUT8DFIDJazNJsVJdxNVEpnQTZM=
 github.com/streadway/amqp v1.1.0/go.mod h1:WYSrTEYHOXHd0nwFeUXAe2G2hRnQT+deZJJf88uS9Bg=
 golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

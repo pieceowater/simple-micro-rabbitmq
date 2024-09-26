@@ -13,30 +13,25 @@ type Message struct {
 
 func HandleMessage(msg gossiper.AMQMessage) interface{} {
 	switch msg.Pattern { // Используем Pattern вместо Action
-	case "templateGetItem":
+	case "findOneItem":
 		item := services.TemplateGetItem(msg.Data)
-		log.Printf("templateGetItem: %v", item)
+		log.Printf("findOneItem: %v", item)
 		return item
 
-	case "templateGetItems":
+	case "findAllItem":
 		items := services.TemplateGetItems()
-		log.Printf("templateGetItems: %v", items)
+		log.Printf("findAllItem: %v", items)
 		return items
 
-	case "templateCreateItem":
+	case "createItem":
 		created := services.TemplateCreateItem(msg.Data)
-		log.Printf("templateCreateItem: %v", created)
+		log.Printf("createItem: %v", created)
 		return created
 
-	case "templateUpdateItem":
+	case "updateItem":
 		updated := services.TemplateUpdateItem(msg.Data)
-		log.Printf("templateUpdateItem: %v", updated)
+		log.Printf("updateItem: %v", updated)
 		return updated
-
-	case "templateRemoveItem":
-		removed := services.TemplateRemoveItem(msg.Data)
-		log.Printf("templateRemoveItem: %v", removed)
-		return removed
 
 	case "ping":
 		log.Println("Received PING request")
