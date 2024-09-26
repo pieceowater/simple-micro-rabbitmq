@@ -2,7 +2,7 @@ module simple-micro-rabbitmq
 
 go 1.23.0
 
-require github.com/pieceowater-dev/lotof.lib.gossiper v1.0.14
+require github.com/pieceowater-dev/lotof.lib.gossiper v1.0.15
 
 require (
 	github.com/fatih/color v1.17.0 // indirect
