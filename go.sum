@@ -27,9 +27,15 @@ github.com/pieceowater-dev/lotof.lib.gossiper v1.0.9 h1:p+O/DX0GWY0CFpUoklYb1Ugm
 github.com/pieceowater-dev/lotof.lib.gossiper v1.0.9/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
 github.com/pieceowater-dev/lotof.lib.gossiper v1.0.10 h1:KhBlg/0FOCJiT2mN/Y7vLo+T1TQzer/90mG3aktq28k=
 github.com/pieceowater-dev/lotof.lib.gossiper v1.0.10/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
+github.com/pieceowater-dev/lotof.lib.gossiper v1.0.11 h1:bV85oqbU7Rpc1VbtYLPlgx5xt+BPgISFZyXPEP3/L7k=
+github.com/pieceowater-dev/lotof.lib.gossiper v1.0.11/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
+github.com/pieceowater-dev/lotof.lib.gossiper v1.0.12 h1:AnM2ne2e+Sl9E18hIP1AU0jq8wPl7khayb0/xAKPcX4=
+github.com/pieceowater-dev/lotof.lib.gossiper v1.0.12/go.mod h1:2KRZO6gxqEiS2cnhTcGwsMfCX/lIRkH5lL8cxz8fNmk=
 github.com/streadway/amqp v1.1.0 h1:py12iX8XSyI7aN/3dUT8DFIDJazNJsVJdxNVEpnQTZM=
 github.com/streadway/amqp v1.1.0/go.mod h1:WYSrTEYHOXHd0nwFeUXAe2G2hRnQT+deZJJf88uS9Bg=
 golang.org/x/sys v0.0.0-20220811171246-fbc7d0a398ab/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.6.0/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=
 golang.org/x/sys v0.18.0 h1:DBdB3niSjOA/O0blCZBqDefyWNYveAYMNF1Wum0DYQ4=
 golang.org/x/sys v0.18.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=
+golang.org/x/sys v0.25.0 h1:r+8e+loiHxRqhXVl6ML1nO3l1+oFoWbnlu2Ehimmi34=
+golang.org/x/sys v0.25.0/go.mod h1:/VUhepiaJMQUp4+oa/7Zr1D23ma6VTLIYjOOTFZPUcA=

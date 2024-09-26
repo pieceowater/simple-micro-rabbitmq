@@ -9,6 +9,7 @@ var GossiperConf = gossiper.Config{
 		Required: []string{"RABBITMQ_DSN"},
 	},
 	AMQPConsumer: gossiper.AMQPConsumerConfig{
+		DSNEnv: "RABBITMQ_DSN",
 		Queues: []gossiper.QueueConfig{
 			{
 				Name:    "template_queue",

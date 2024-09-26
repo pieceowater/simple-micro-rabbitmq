@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	gossiper "github.com/pieceowater-dev/lotof.lib.gossiper"
 	"log"
 	"simple-micro-rabbitmq/services"
 )
@@ -10,7 +11,7 @@ type Message struct {
 	Data    interface{} `json:"data"`
 }
 
-func HandleMessage(msg Message) interface{} {
+func HandleMessage(msg gossiper.AMQMessage) interface{} {
 	switch msg.Pattern { // Используем Pattern вместо Action
 	case "templateGetItem":
 		item := services.TemplateGetItem(msg.Data)

@@ -1,19 +1,21 @@
 package main
 
 import (
+	"encoding/json"
 	gossiper "github.com/pieceowater-dev/lotof.lib.gossiper"
 	"log"
 	"simple-micro-rabbitmq/config"
-	"simple-micro-rabbitmq/handlers"
+	"simple-micro-rabbitmq/controllers"
 )
 
 func main() {
-	gossiper.Setup(config.GossiperConf)
-
-	// Начинаем чтение сообщений из RabbitMQ
-	log.Println("Starting to consume messages...")
-	err := handlers.ConsumeMessage()
-	if err != nil {
-		log.Fatal("Failed to consume messages:", err)
-	}
+	gossiper.Setup(config.GossiperConf, func(msg []byte) interface{} {
+		var message gossiper.AMQMessage
+		err := json.Unmarshal(msg, &message)
+		if err != nil {
+			log.Println("Failed to unmarshal custom message:", err)
+			return nil
+		}
+		return controllers.HandleMessage(message)
+	})
 }
